@@ -1,0 +1,99 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Field",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/tests/test_field_dataset_image.py",
+            //"module": "scripts.0_introduction",
+            "justMyCode": false
+        },
+        {
+            "name": "Test position encodingFeild",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/tests/test_positional_encoding.py",
+            //"module": "scripts.0_introduction",
+            "justMyCode": false
+        },
+        {
+            "name": "Train MLP Field",
+            "type": "python",
+            "request": "launch",
+            "module": "scripts.train_field",
+            "justMyCode": true,
+            "args": [
+                "field=mlp",
+                "dataset=image",
+            ]
+        },
+        {
+            "name": "Train Grid Field",
+            "type": "python",
+            "request": "launch",
+            "module": "scripts.train_field",
+            "justMyCode": false,
+            "args": [
+                "field=grid",
+                "dataset=image",
+            ]
+        },
+        {
+            "name": "Train Siren Field",
+            "type": "python",
+            "request": "launch",
+            "module": "scripts.train_field",
+            "justMyCode": true,
+            "args": [
+                "field=siren",
+                "dataset=image",
+            ]
+        },
+        {
+            "name": "Train Hybrid Grid Field",
+            "type": "python",
+            "request": "launch",
+            "module": "scripts.train_field",
+            "justMyCode": true,
+            "args": [
+                "field=hybrid_grid",
+                "dataset=image",
+            ]
+        },
+        {
+            "name": "Train Ground Grid Field",
+            "type": "python",
+            "request": "launch",
+            "module": "scripts.train_field",
+            "justMyCode": true,
+            "args": [
+                "field=ground_plan",
+                "dataset=implicit",
+                "dataset.function=sphere",
+            ]
+        },
+        {
+            "name": "Train NeRF",
+            "type": "python",
+            "request": "launch",
+            "module": "scripts.train_nerf",
+            "justMyCode": true,
+            "args": [
+                //"dataset=implicit",
+                //"dataset.function=sphere",
+            ]
+        },
+        {
+            "name": "Compare Fields",
+            "type": "python",
+            "request": "launch",
+            "module": "scripts.compare_fields",
+            "justMyCode": true,
+            "args": []
+        },
+    ]
+}
